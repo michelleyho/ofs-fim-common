@@ -111,7 +111,7 @@ def process_ofss_configs(ofss_list):
         ofss_elems = ofss_string.split(",")
         for ofss in ofss_elems:
             if ofss:
-                ofss_abs_path = os.path.abspath(ofss)
+                ofss_abs_path = os.path.abspath(ofss.strip())
                 ofss_config_files_queue.append(ofss_abs_path)
 
     ofs_ip_configurations = collections.defaultdict(list)

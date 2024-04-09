@@ -76,6 +76,8 @@ def instantiate_ips(ofs_ip_configurations, target_dir):
         ]
 
     for ip in ip_type:
+        if ip not in ofs_ip_configurations:
+            continue
         for ip_instance in ofs_ip_configurations[ip]:
             if ip == "iopll":
                 to_config.append(IOPLL(ofs_config, ip_instance, target_dir))

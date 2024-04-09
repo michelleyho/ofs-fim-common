@@ -1,0 +1,18 @@
+```python
+python -m pytest -v -s tests --cov-report html --cov --cov-branch
+```
+
+`pytest.ini file`
+```
+[pytest]
+log_cli = 1
+log_cli_level = INFO
+log_cli_format = %(message)s
+
+log_file = pytest.log
+log_file_level = DEBUG
+log_file_format = %(asctime)s [%(levelname)8s] %(message)s (%(filename)s:%(lineno)s)
+log_file_date_format=%Y-%m-%d %H:%M:%S
+
+
+```
